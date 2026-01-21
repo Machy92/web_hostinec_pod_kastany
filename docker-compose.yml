@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hostinec-frontend:
+    build: .
+    ports:
+      - "8080:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true

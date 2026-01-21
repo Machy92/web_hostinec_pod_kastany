@@ -1,0 +1,68 @@
+:root {
+    --bg-primary: radial-gradient(circle at 50% 0%, #2b3035 0%, #121212 80%);
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --glass-bg: rgba(30, 30, 30, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --input-bg: rgba(255, 255, 255, 0.03);
+    --input-border: rgba(255, 255, 255, 0.1);
+    --input-focus-bg: rgba(255, 255, 255, 0.05);
+    --gold-accent: #ffc107;
+    --nav-bg: rgba(43, 48, 53, 0.95);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --calendar-invert: 1;
+    --glass-hover-bg: rgba(40, 40, 40, 0.8);
+}
+
+[data-theme='light'] {
+    --bg-primary: #f8f9fa;
+    --text-primary: #1c1917;
+    --text-secondary: #495057;
+
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    --input-bg: #ffffff;
+    --input-border: #d6d3d1;
+    --input-focus-bg: #ffffff;
+
+    --nav-bg: rgba(248, 249, 250, 0.95);
+
+    --card-bg: #ffffff;
+    --card-text: #1c1917;
+    --calendar-invert: 0;
+
+    --gold-accent: #ffc107;
+
+    --glass-hover-bg: #ffffff;
+}
+
+.premium-bg {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    color: var(--text-primary);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.nav-link-custom-white {
+    color: #e0e0e0 !important;
+}
+
+.nav-link-custom-black {
+    color: #1c1917 !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse .navbar-nav {
+        background: var(--nav-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--glass-border);
+    }
+}

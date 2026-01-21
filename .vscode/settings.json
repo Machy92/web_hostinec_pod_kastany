@@ -1,0 +1,8 @@
+{
+    "deno.enable": true,
+    "deno.unstable": true,
+    "deno.path": "/opt/homebrew/bin/deno",
+    "deno.enablePaths": [
+        "supabase/functions"
+    ]
+}

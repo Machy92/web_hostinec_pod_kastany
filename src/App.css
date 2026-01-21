@@ -1,0 +1,415 @@
+:root {
+  --dark-bg: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --primary-color: #ffc107;
+  --text-light: #e0e0e0;
+  --text-muted: #aaa;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.navbar {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem !important;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #111;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ffca2c;
+  border-color: #ffca2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+}
+
+section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+section.bg-darker {
+  background-color: var(--dark-bg-secondary);
+}
+
+#hero {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+#hero img.logo {
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon-box i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-icon-box:hover i {
+  transform: translateY(-10px);
+}
+
+.page-container {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.allergen-list {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.allergen-prefix {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.allergen-legend-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.allergen-legend-list {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .column-count-2 {
+    column-count: 2;
+  }
+}
+
+.floating-scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  animation: bounce 2s infinite;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.floating-scroll-arrow:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-7px);
+  }
+}
+
+.gallery-thumbnail {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.admin-login-link a {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.admin-login-link a:hover {
+  color: var(--primary-color);
+}
+
+.login-page-background {
+  background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.8)), url('./assets/hostinec-vnitrek.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+.menu-item-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  background: var(--glass-hover-bg);
+  border-color: rgba(255, 193, 7, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.price-tag {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+.category-title {
+  color: var(--text-primary);
+  font-weight: bold;
+  letter-spacing: 1px;
+
+}
+
+.sticky-category-nav {
+  position: sticky;
+  top: 76px;
+  z-index: 1020;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.98);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sticky-category-nav .container {
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 0;
+}
+
+.sticky-category-nav .container::-webkit-scrollbar {
+  display: none;
+}
+
+.category-nav-link {
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.category-nav-link:hover,
+.category-nav-link.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.scroll-margin-top {
+  scroll-margin-top: 140px;
+}
+
+.menu-hero {
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.1), var(--dark-bg)), url('./assets/menu-hero-updated.jpg') no-repeat center 60%;
+  background-size: cover;
+  padding: 120px 0 80px;
+  position: relative;
+}
+
+.menu-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, var(--dark-bg) 100%);
+}
+
+.allergen-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.1);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  background: var(--glass-hover-bg);
+  border-color: rgba(255, 193, 7, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(18, 18, 18, 1) 100%);
+}
+
+.btn-glow {
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 25px rgba(255, 193, 7, 0.6);
+  transform: translateY(-2px);
+}
+
+.section-title-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.section-title-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+
+.hero-section {
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+    background-position: center;
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .logo {
+    max-width: 180px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-section {
+    padding: 40px 0;
+  }
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}

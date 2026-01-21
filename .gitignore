@@ -1,0 +1,9 @@
+# Soubory s tajnými klíči
+.env
+.env.local
+
+# Složka s nainstalovanými balíčky
+/node_modules
+
+# Složka s výsledkem po "buildu"
+/dist
